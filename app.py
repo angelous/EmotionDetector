@@ -9,28 +9,11 @@ import pickle
 import string
 import nltk
 nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('punkt_tab')
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords, wordnet
 from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
-
-nltk_resources = {
-    "punkt": "tokenizers/punkt",
-    "stopwords": "corpora/stopwords",
-    "wordnet": "corpora/wordnet",
-    "averaged_perceptron_tagger": "taggers/averaged_perceptron_tagger"
-}
-
-for resource, path in nltk_resources.items():
-    try:
-        nltk.data.find(path)
-    except LookupError:
-        nltk.download(resource)
 
 st.markdown("""
     <style>
