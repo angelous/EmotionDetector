@@ -8,6 +8,10 @@ import datetime
 import pickle
 import string
 import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords, wordnet
 from nltk.tag import pos_tag
