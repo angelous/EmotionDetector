@@ -12,6 +12,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt_tab')
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords, wordnet
 from nltk.tag import pos_tag
@@ -50,8 +51,10 @@ st.markdown("""
     }
 
     .stButton > button {
-        background-color: black;
+        background-color: black !important;
         color: white !important;
+        font-weight: bold;
+        line-height: 50px;
         border-radius: 20%;
         height: 50px;
         width: 50px;
