@@ -8,7 +8,7 @@ import datetime
 import pickle
 import string
 import nltk
-nltk.download('punkt')
+nltk.download('punkt_tab')
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from nltk.corpus import stopwords, wordnet
 from nltk.tag import pos_tag
