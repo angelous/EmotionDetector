@@ -18,6 +18,19 @@ from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
 
+nltk_resources = {
+    "punkt": "tokenizers/punkt",
+    "stopwords": "corpora/stopwords",
+    "wordnet": "corpora/wordnet",
+    "averaged_perceptron_tagger": "taggers/averaged_perceptron_tagger"
+}
+
+for resource, path in nltk_resources.items():
+    try:
+        nltk.data.find(path)
+    except LookupError:
+        nltk.download(resource)
+
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Alata&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
